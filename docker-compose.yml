@@ -1,0 +1,8 @@
+version: '3'
+name: gotosocial-ai-bot
+services:
+  gotosocial-ai-bot:
+    build: .
+    env_file:
+      - .env
+    restart: unless-stopped
