@@ -2,7 +2,7 @@ version: '3'
 name: gotosocial-ai-bot
 services:
   gotosocial-ai-bot:
-    image: ghcr.io/maxbengtzen/gotosocial-ai-bot:latest
+    build: .
     container_name: gotosocial-ai-bot
     hostname: gotosocial-ai-bot
     environment:
