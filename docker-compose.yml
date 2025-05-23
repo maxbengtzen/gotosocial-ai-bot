@@ -2,7 +2,12 @@ version: '3'
 name: gotosocial-ai-bot
 services:
   gotosocial-ai-bot:
-    build: .
-    env_file:
-      - .env
+    image: ghcr.io/maxbengtzen/gotosocial-ai-bot:latest
+    container_name: gotosocial-ai-bot
+    hostname: gotosocial-ai-bot
+    environment:
+      - MASTODON_ACCESS_TOKEN=your_access_token
+      - MASTODON_API_BASE_URL=https://your.instance
+      - OPENAI_API_KEY=your_openai_api_key
+      - OPENAI_MODEL=gpt-4.1-nano
     restart: unless-stopped
